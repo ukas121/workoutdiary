@@ -6,7 +6,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const AddExerciseScreen = () => {
-  //retrieve context
   const { workouts, setWorkouts } = useContext(WorkoutContext);
   const { units } = useContext(SettingsContext);
 
@@ -44,10 +43,8 @@ const AddExerciseScreen = () => {
       date: date,
     };
 
-    // update workout list using setWorkouts provided context
     setWorkouts([...workouts, newExercise]);
 
-    // clear inputs
     setSportType("Running");
     setDistance("");
     setDuration("");
@@ -87,14 +84,6 @@ const AddExerciseScreen = () => {
         onChangeText={setDistance}
         keyboardType="numeric"
       />
-      <TextInput
-        style={Styles.input}
-        placeholder="Duration (minutes)"
-        value={duration}
-        onChangeText={setDuration}
-        keyboardType="numeric"
-      />
-
       <TextInput
         style={Styles.input}
         placeholder="Duration (minutes)"

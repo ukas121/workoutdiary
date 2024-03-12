@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Provider as PaperProvider } from 'react-native-paper';
-import { WorkoutContext, SettingsContext } from './components/contexts';
-import AddExerciseScreen from './components/AddExerciseScreen';
-import WorkoutListScreen from './components/WorkoutListScreen';
-import SettingsScreen from './components/SettingsScreen';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import React, { useState } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Provider as PaperProvider } from "react-native-paper";
+import { WorkoutContext, SettingsContext } from "./components/contexts";
+import AddExerciseScreen from "./components/AddExerciseScreen";
+import WorkoutListScreen from "./components/WorkoutListScreen";
+import SettingsScreen from "./components/SettingsScreen";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
@@ -19,7 +19,7 @@ const App = () => {
       <SettingsContext.Provider value={{ units, setUnits }}>
         <PaperProvider>
           <NavigationContainer>
-            <Tab.Navigator 
+            <Tab.Navigator
               screenOptions={({ route }) => ({
                 tabBarIcon: ({ focused, color, size }) => {
                   let iconName;
@@ -31,14 +31,20 @@ const App = () => {
                   } else if (route.name === "Settings") {
                     iconName = focused ? "cog" : "cog-outline";
                   }
-                  return <MaterialCommunityIcons name={iconName} size={size} color={color} />;
+                  return (
+                    <MaterialCommunityIcons
+                      name={iconName}
+                      size={size}
+                      color={color}
+                    />
+                  );
                 },
-                tabBarLabelStyle: { display: "none"},
+                tabBarLabelStyle: { display: "none" },
                 headerShown: false,
-                tabBarActiveBackgroundColor: "black",
-                tabBarInactiveBackgroundColor: "darkgrey",
-                tabBarActiveTintColor: "orange",
-                tabBarInactiveTintColor: "black",
+                tabBarActiveBackgroundColor: "white",
+                tabBarInactiveBackgroundColor: "black",
+                tabBarActiveTintColor: "black",
+                tabBarInactiveTintColor: "white",
               })}
             >
               <Tab.Screen name="Add Exercise" component={AddExerciseScreen} />
@@ -53,4 +59,3 @@ const App = () => {
 };
 
 export default App;
-
