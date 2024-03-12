@@ -2,31 +2,32 @@ import { StyleSheet } from 'react-native';
 
 const Styles = StyleSheet.create({
   header: {
-    fontSize: 20,
+    fontSize: 23,
     fontWeight: 'bold',
     textAlign: 'center',
     color: 'white',
   },
   WoutHeader: {
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: 'white',
+    color: 'black',
     marginBottom: 10,
+    marginTop: 30,
   },
   workoutItem: {
-    padding: 10,
+    padding: 12,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
-    backgroundColor: 'lightgreen',
+    backgroundColor: 'lightblue',
   },
   workoutType: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   workoutDate: {
-    fontSize: 14,
-    color: '#888',
+    fontSize: 17,
+    color: 'black',
   },
   expandedInfo: {
     marginTop: 10,
@@ -37,11 +38,11 @@ const Styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 2,
-    backgroundColor: 'red',
+    backgroundColor: 'lightblue',
   },
   containerTwo: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'lightblue',
     padding: 20,
   },
   input: {
@@ -57,7 +58,7 @@ const Styles = StyleSheet.create({
     color: 'white',
   },
   addExerciseButton: {
-    backgroundColor: 'lightgreen',
+    backgroundColor: 'orange',
     padding: 6,
     borderRadius: 5,
     marginTop: 10,
@@ -84,7 +85,7 @@ const Styles = StyleSheet.create({
     margin: 5,
   },
   selectedIcon: {
-    backgroundColor: 'orange',
+    backgroundColor: 'black',
   },
   totalIcon: {
     backgroundColor: 'black',

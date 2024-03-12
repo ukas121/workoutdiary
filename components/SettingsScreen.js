@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { View, Text } from 'react-native';
-import { SettingsContext } from './contexts';
-import { RadioButton } from 'react-native-paper';
-import Styles from '../style/Styles';
+import React, { useContext } from "react";
+import { View, Text } from "react-native";
+import { SettingsContext } from "./contexts";
+import { RadioButton } from "react-native-paper";
+import Styles from "../style/Styles";
 
 const SettingsScreen = () => {
   const { units, setUnits } = useContext(SettingsContext);
@@ -15,20 +15,20 @@ const SettingsScreen = () => {
           value="kilometers"
           status={units === "kilometers" ? "checked" : "unchecked"}
           onPress={() => setUnits("kilometers")}
-          color="orange"
-          uncheckedColor="white"
+          color="red"
+          uncheckedColor="black"
         />
-        <Text style={{color:"white"}}>Kilometers</Text>
+        <Text style={{ color: "black" }}>Kilometers</Text>
       </View>
-      <View style={{ flexDirection: "row", alignItems: "center" }}>
+      <View style={{ flexDirection: "row", alignItems: "center", width: 40, height: 50 }}>
         <RadioButton
           value="miles"
           status={units === "miles" ? "checked" : "unchecked"}
           onPress={() => setUnits("miles")}
-          color="orange"
-          uncheckedColor="white"
+          color="red"
+          uncheckedColor="black"
         />
-        <Text style={{color:"white"}}>Miles</Text>
+        <Text style={{ color: "black" }}>Miles</Text>
       </View>
     </View>
   );
